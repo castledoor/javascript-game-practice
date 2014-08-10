@@ -8,12 +8,6 @@ var Game = {
     this.players.push(player);
     this.players[0].setColor("pink");
   },
-  startingPosition: function(index) {
-    if (this.board[index] === this.board[0]) {
-      this.board[0] = this.players[0].color;
-      return this.board[0];
-    }
-  },
   grabPeice: function(index) {
     if (this.board[index] == this.players[0].color) {
       this.board[index] = undefined;
