@@ -61,15 +61,19 @@
 
 // TESTS FOR SETUP_BOARD //
 
-describe("Game", function() {
-  it("sets up peices inside of an array", function() {
-    var game = Object.create(Game);
-    var player = Object.create(Player);
-    game.initialize();
-    game.createPlayer();
-    game.setup();
-    game.board.should.eql(["pink",undefined,"pink",undefined,"pink",undefined,"pink",undefined,"pink"]);
-  });
-});
+// describe("Game", function() {
+//   it("sets up peices inside of an array", function() {
+//     var game = Object.create(Game);
+//     var player = Object.create(Player);
+//     game.initialize();
+//     game.createPlayer();
+//     game.setup();
+//     game.board.should.eql(["pink",undefined,"pink",undefined,"pink",undefined,"pink",undefined,"pink"]);
+//   });
+// });
+
+// TESTS FOR DIAGONAL ONLY //
+
+
 
 
