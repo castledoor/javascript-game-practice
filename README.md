@@ -9,4 +9,4 @@
 <p>1. Getting one Peice to jump around a 9x9 board</p>
 <p>2. Writing a function that sets up a 9 x 9 board</p>
 
-<p> @tallgirltaadaa</p>
+<p><a href="http://twitter.com/tallgirltaadaa"> @tallgirltaadaa</a></p>
