@@ -1,7 +1,7 @@
 var Game = {
   initialize: function() {
-    this.board = []
-    this.players = []
+    this.board = [];
+    this.players = [];
   },
   createPlayer: function() {
     player = Object.create(Player);
