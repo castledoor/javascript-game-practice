@@ -1,3 +1,5 @@
+// TESTS FOR JUMP AROUND //
+
 // describe("Game", function() {
 //   it("initializes with a board array", function() {
 //     var game = Object.create(Game);
@@ -24,7 +26,6 @@
 //     var player = Object.create(Player);
 //     game.initialize();
 //     game.createPlayer();
-//     game.startingPosition();
 //     game.dropPeice(0);
 //     game.grabPeice(0);
 //     game.board.should.eql([undefined]);
@@ -35,8 +36,7 @@
 //     var player = Object.create(Player);
 //     game.initialize();
 //     game.createPlayer();
-//     game.startingPosition();
-//     game.dropPeice(1);
+//     game.dropPeice(0);
 //     game.board.should.eql(["pink"]);
 //   });
 
@@ -59,8 +59,10 @@
 //   });
 // });
 
+// TESTS FOR SETUP_BOARD //
+
 describe("Game", function() {
-  it("sets up the board", function() {
+  it("sets up peices inside of an array", function() {
     var game = Object.create(Game);
     var player = Object.create(Player);
     game.initialize();
