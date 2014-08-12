@@ -6,4 +6,7 @@
 
 <p>So this tutorial is geared toward that new programmer who just dosnt know where to start, all the individual concepts that go into building a checkers game broken down into super small stand alone parts and slowly build onto each other</p>
 
+<p>1. Getting one Peice to jump around a 9x9 board</p>
+<p>2. Writing a function that sets up a 9 x 9 board</p>
+
 <p> @tallgirltaadaa</p>
