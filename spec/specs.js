@@ -72,7 +72,17 @@
 //   });
 // });
 
-// TESTS FOR DIAGONAL ONLY //
+// TESTS FOR DIAGONAL MOVES ONLY //
+
+describe("Game", function() {
+  it("peices moves diag only", function() {
+    var game = Object.create(Game);
+    var player = Object.create(Player);
+    game.initialize();
+    game.createPlayer();
+    game.setup();
+  });
+});
 
 
 

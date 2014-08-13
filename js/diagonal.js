@@ -19,6 +19,18 @@ var Game = {
       return this.board[index];
     }
   },
+  grabPeice: function(index) {
+    if (this.board[index] == this.players[0].color) {
+      this.board[index] = undefined;
+    }
+  },
+  dropPeice: function(index) {
+     var peice = this.board.indexOf("pink")
+    if (this.board[index] == undefined && peice == -1){
+      this.board[index] = this.players[0].color;
+      return this.board[index];
+    }
+  },
   createPlayer: function() {
     player = Object.create(Player);
     this.players.push(player);
@@ -45,6 +57,16 @@ $(document).ready(function() {
   var playGame = function() {
     initializeGame();
     console.log(game.board);
+     $(".spaces").click(function() {
+      if ($(this).text() == "pink") {
+        $(this).empty(this.id);
+        $(this).text(game.grabPeice(this.id));
+        console.log(game.board);
+      } else if ($(this).text() != "pink") {
+        $(this).text(game.dropPeice(this.id));
+        console.log(game.board);
+    }
+  });
   };
   playGame();
 });
