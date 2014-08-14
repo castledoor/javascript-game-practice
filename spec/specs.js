@@ -81,6 +81,9 @@ describe("Game", function() {
     game.initialize();
     game.createPlayer();
     game.setup();
+    game.place_setup();
+    game.grabPeice();
+    
   });
 });
 

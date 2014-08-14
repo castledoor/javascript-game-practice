@@ -4,7 +4,7 @@ var Game = {
     this.players = [];
   },
   setup: function(index) {
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 3; i++) {
       if ( i % 2 == 0)  {
         this.board.push(this.players[0].color);
       }
@@ -25,11 +25,13 @@ var Game = {
     }
   },
   dropPeice: function(index) {
-     var peice = this.board.indexOf("pink")
-    if (this.board[index] == undefined && peice == -1){
+    if (this.board[index] == undefined){
       this.board[index] = this.players[0].color;
       return this.board[index];
     }
+  },
+  currentPosition: function(index) {
+     return this.board.indexOf(index)
   },
   createPlayer: function() {
     player = Object.create(Player);
@@ -58,15 +60,18 @@ $(document).ready(function() {
     initializeGame();
     console.log(game.board);
      $(".spaces").click(function() {
+      var current = this.id
       if ($(this).text() == "pink") {
         $(this).empty(this.id);
-        $(this).text(game.grabPeice(this.id));
+        console.log(current);
         console.log(game.board);
+        $(this).text(game.grabPeice(this.id));
       } else if ($(this).text() != "pink") {
+        console.log(this.id);
         $(this).text(game.dropPeice(this.id));
         console.log(game.board);
-    }
-  });
+      }
+    });
   };
   playGame();
 });
